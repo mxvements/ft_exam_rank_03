@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <stdio.h>
 
+//cc -Wall -Wextra -Werror get_next_line.c main.c -D BUFFER_SIZE=42 -o gnl
 int main(int argc, char **argv)
 {
     char    *line;

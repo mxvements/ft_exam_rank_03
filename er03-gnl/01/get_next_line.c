@@ -22,7 +22,7 @@ void    ft_strcpy(char *dst, char *src)
     dst[i] = '\0';
 }
 
-char    *ft_strdup(const char *str)
+char    *ft_strdup(char *str)
 {
     size_t  len = ft_strlen(str) + 1;
     char    *dst = (char *)malloc((sizeof(char)) * len);
@@ -30,7 +30,7 @@ char    *ft_strdup(const char *str)
     if (!dst)
         return (NULL);
     ft_strcpy(dst, str);
-    return dst;
+    return (dst);
 }
 
 char    *ft_strchr(char *str, int c)
@@ -44,6 +44,7 @@ char    *ft_strchr(char *str, int c)
             return (str + i);
         i++;
     }
+    return (NULL);
 }
 
 char    *ft_strjoin(char *s1, char *s2)
@@ -66,7 +67,7 @@ char    *ft_strjoin(char *s1, char *s2)
 
 char    *get_next_line(int fd)
 {
-    static char *buf[BUFFER_SIZE + 1];
+    static char buf[BUFFER_SIZE + 1];
     char        *line;
     char        *nl_ptr;
     int         read_count;
