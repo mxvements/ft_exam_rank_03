@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <stdarg.h>
 
 int	ft_putchar(char c)
@@ -83,6 +84,8 @@ int	main(int argc, char **argv)
 	(void)argc;
 	
 	ft_printf("%s\n", NULL);
+	printf("%s\n", (char *)NULL);
+
 	ft_printf("%s\n", s);
 	len = ft_printf("%s", argv[1]);
 	ft_printf("\nlen: %d", len);
